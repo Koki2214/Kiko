@@ -5,413 +5,238 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
-  <title>WowFolio - A Simple & Clean Portfolio Template For Developers</title>
-  <meta name="description" content="Wowfolio - A Simple & Clean Portfolio Template For Developers" />
+  <title>John Francis A. Flores - Portfolio</title>
+  <meta name="description" content="Portfolio of John Francis A. Flores" />
+
+  <style>
+    /* Minimalist Black & Gray Theme */
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: 'PT Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header,
+    footer {
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+      padding: 1em 2em;
+    }
+
+    .main-header__logo-text {
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 1.2em;
+    }
+
+    nav a {
+      color: #e0e0e0;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #aaaaaa;
+    }
+
+    .home-hero {
+      padding: 5em 2em;
+      text-align: center;
+    }
+
+    .heading-primary__main {
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 4em 2em;
+    }
+
+    h2 {
+      font-size: 1.6em;
+      margin-bottom: 1em;
+      color: #f0f0f0;
+    }
+
+    .btn {
+      background-color: #333;
+      color: #fff;
+      border: 1px solid #444;
+      padding: 0.6em 1.2em;
+      border-radius: 4px;
+      transition: 0.3s;
+      cursor: pointer;
+      margin: 0.3em;
+    }
+
+    .btn:hover {
+      background-color: #555;
+    }
+
+    .btn-inv {
+      background-color: transparent;
+      border: 1px solid #666;
+      color: #e0e0e0;
+    }
+
+    .btn-inv:hover {
+      background-color: #222;
+    }
+
+    .about__skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5em;
+      list-style: none;
+      padding: 0;
+    }
+
+    .about__skill {
+      background: #222;
+      padding: 0.4em 0.8em;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+
+    .projects__list-item {
+      background: #1e1e1e;
+      padding: 1.5em;
+      border-radius: 8px;
+      margin-bottom: 2em;
+    }
+
+    .projects__list-item-img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 1em;
+    }
+
+    .contact__form-field {
+      margin-bottom: 1em;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact__form-field-input,
+    textarea {
+      padding: 0.6em;
+      border: 1px solid #444;
+      border-radius: 4px;
+      background: #1e1e1e;
+      color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 
 <body>
   <header class="main-header">
     <div class="main-header__logo-container">
-      <div class="main-header__logo-img-cont">
-        <img
-          src="https://d33wubrfki0l68.cloudfront.net/32c48e23e828c42a99a37db81e2a91d7c8eed4de/d134a/assets/png/ram-maheshwari.png"
-          alt="logo Image" class="main-header__logo-img" />
-      </div>
-      <h4 class="main-header__logo-text">John Anderson</h4>
+      <h4 class="main-header__logo-text">John Francis A. Flores</h4>
     </div>
     <nav class="main-header__navigation">
       <ul class="main-header__navigation-links">
-        <li class="main-header__navigation-link"><a href="./index.html"> Home </a></li>
-        <li class="main-header__navigation-link"><a href="./index.html#about"> About </a></li>
-        <li class="main-header__navigation-link">
-          <a href="./index.html#projects"> Projects </a>
-        </li>
-        <li class="main-header__navigation-link"><a href="./index.html#contact" href=""> Contact </a></li>
+        <li><a href="#home-hero"> Home </a></li>
+        <li><a href="#about"> About </a></li>
+        <li><a href="#projects"> Projects </a></li>
+        <li><a href="#contact"> Contact </a></li>
       </ul>
     </nav>
-    <div class="main-header__sm-scr-nav-btn">
-      <div class="main-header__sm-scr-nav-btn-line"></div>
-      <div class="main-header__sm-scr-nav-btn-line"></div>
-    </div>
-    <div class="main-header__sm-menu">
-      <div class="main-header__sm-menu-close">
-
-      </div>
-      <ul class="main-header__sm-menu-links">
-        <li>
-          <a class="main-header__sm-menu-link main-header__sm-menu-link--1" name="home-hero">Home</a>
-        </li>
-
-        <li>
-          <a class="main-header__sm-menu-link main-header__sm-menu-link--2" name="about">About</a>
-        </li>
-        <li>
-          <a class="main-header__sm-menu-link main-header__sm-menu-link--3" name="projects">Projects</a>
-        </li>
-        <li>
-          <a class="main-header__sm-menu-link main-header__sm-menu-link--4" name="contact">Contact</a>
-        </li>
-      </ul>
-    </div>
-    <!-- <button class="btn btn-theme btn-sm">Download CV</button> -->
   </header>
-
-  <!--Remove or Comment out this theme selector code when you are done with choosing the right color for your theme so this color selector don't appear when you host the site online-->
-  <div class="themeClrSelector">
-    <input placeholder="Color Selector" type="color" value="#1DA1F2" class="themeClrSelector__input" />
-    <img alt="theme color tester" src="https://img.icons8.com/fluent/48/000000/rgb-circle-1.png"
-      class="themeClrSelector__img" />
-  </div>
-  <!---->
 
   <section id="home-hero" class="home-hero">
     <div class="home-hero__content">
-      <div class="home-hero__info">
-        <h1 class="heading-primary home-hero__heading-primary">
-          <span class="heading-primary__sm"> Hello 👋</span>
-          <span class="heading-primary__main">
-            I'm John Francis A. Flores! A Computer Engineer who loves to learn and create through computer engineering
-          </span>
-        </h1>
-        <button class="btn btn-theme home-hero__btn-theme">Projects</button>
-        <button class="btn btn-inv home-hero__btn-theme">Contact</button>
-      </div>
+      <h1 class="heading-primary home-hero__heading-primary">
+        <span class="heading-primary__sm"> Hello 👋</span><br>
+        <span class="heading-primary__main">
+          I'm John Francis A. Flores! A Computer Engineering student who loves to learn and create with technology.
+        </span>
+      </h1>
+      <button class="btn">Projects</button>
+      <button class="btn btn-inv">Contact</button>
     </div>
   </section>
-  <section id="about" class="about main-section">
-    <div class="main-container">
-      <h2 class="heading-secondary projects__heading-secondary">
-        <span class="heading-secondary__sm"> About 🦄</span>
-        <span class="heading-secondary__main">
-          Here you will find more information about me, what I do, and list of my current skills in programming
-      </h2>
-      <div class="main-section__content">
-        <div class="about__info">
-          <div class="about__main-info">
-            <h3 class="heading-quaternary about__heading-quaternary">
-              My Story
-            </h3>
-            <p class="text-primary about__text-primary">
-              <span>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Error, aliquid! Itaque corrupti magnam fugiat mollitia labore
-                magni saepe veritatis voluptatum alias fugit. Explicabo
-                ducimus sequi aut corporis odio repellendus? Lorem ipsum dolor
-                sit amet
-              </span>
-              <span>
-                👋 Hi, I’m John Francis A. Flores, a Computer Engineering student at Marinduque State University.
-                 I’m passionate about computer hardware, electronics, and programming (Python & Java). As a dedicated learner and team leader, 
-                 I strive to create innovative solutions that bridge hardware and software while inspiring collaboration.
-              </span>
-              <span>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Error, aliquid! Itaque corrupti magnam fugiat mollitia labore
-                magni saepe veritatis voluptatum alias fugit. Explicabo
-                ducimus sequi aut corporis odio repellendus? Lorem ipsum dolor
-                sit amet
-              </span>
-            </p>
-            <button class="btn btn-theme about__btn-theme">Projects</button>
-          </div>
-          <div class="about__skill-info">
-            <h3 class="heading-quaternary about__heading-quaternary">
-              My Skills
-            </h3>
-            <ul class="about__skills">
-              <li class="about__skill">html</li>
-              <li class="about__skill">css</li>
-              <li class="about__skill">javascript</li>
-              <li class="about__skill">react</li>
-              <li class="about__skill">node</li>
-              <li class="about__skill">git</li>
-              <li class="about__skill">vscode</li>
-              <li class="about__skill">linux</li>
-              <li class="about__skill">react</li>
-              <li class="about__skill">node</li>
-              <li class="about__skill">git</li>
-              <li class="about__skill">vscode</li>
-              <li class="about__skill">linux</li>
-              <li class="about__skill">javascript</li>
-              <li class="about__skill">react</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="skills-showcase">
-    <ul class="skills-showcase__list">
-      <li class="skills-showcase__list-item">
-        <i class="devicon-html5-plain"></i>
-      </li>
-      <li class="skills-showcase__list-item">
-        <i class="devicon-css3-plain"></i>
-      </li>
-      <li class="skills-showcase__list-item">
-        <i class="devicon-javascript-plain"></i>
-      </li>
-      <li class="skills-showcase__list-item">
-        <i class="devicon-react-original"></i>
-      </li>
-      <li class="skills-showcase__list-item">
-        <i class="devicon-sass-original"></i>
-      </li>
-      <li class="skills-showcase__list-item">
-        <i class="devicon-nodejs-plain"></i>
-      </li>
-      <li class="skills-showcase__list-item">
-        <i class="devicon-git-plain"></i>
-      </li>
 
-      <li class="skills-showcase__list-item">
-        <i class="devicon-android-plain"></i>
-      </li>
-      <li class="skills-showcase__list-item">
-        <i class="devicon-python-plain"></i>
-      </li>
+  <section id="about" class="about main-section">
+    <h2> About 🦄</h2>
+    <p>
+      👋 Hi, I’m <b>John Francis A. Flores</b>, a Computer Engineering student at Marinduque State University.
+      I’m passionate about computer hardware, electronics, and programming (Python & Java).
+      As a dedicated learner and team leader, I strive to create innovative solutions that bridge hardware
+      and software while inspiring collaboration.
+    </p>
+    <h3>My Skills</h3>
+    <ul class="about__skills">
+      <li class="about__skill">HTML</li>
+      <li class="about__skill">CSS</li>
+      <li class="about__skill">JavaScript</li>
+      <li class="about__skill">Python</li>
+      <li class="about__skill">Java</li>
+      <li class="about__skill">Git</li>
+      <li class="about__skill">Linux</li>
+      <li class="about__skill">Electronics</li>
     </ul>
   </section>
+
   <section id="projects" class="projects main-section">
-    <div class="main-container">
-      <h2 class="heading-secondary projects__heading-secondary">
-        <span class="heading-secondary__sm"> Projects 🛠️</span>
-        <span class="heading-secondary__main">
-          Here you will find some of the personal and clients projects that I created with the project details
-        </span>
-      </h2>
-      <div class="main-section__content">
-        <div class="projects__list">
-          <div class="projects__list-item">
-            <div class="projects__list-item-count">
-              <span class="projects__list-item-count-num"> 1 </span>
-              <span class="projects__list-item-count-line"> </span>
-              <span class="projects__list-item-count-end-dot"> </span>
-            </div>
-            <div class="projects__list-item-details">
-              <div class="projects__list-item-img-cont">
-                <img src="./assets/mock.png" alt="Project Image" class="projects__list-item-img" />
-              </div>
-              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
-                Project Name
-              </h3>
-              <!-- <hr class="projects__title-text-divider" /> -->
-
-              <p class="text-primary projects__list-item-text-primary">
-                <span>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Error, aliquid! Itaque corrupti magnam fugiat mollitia
-                  labore magni saepe veritatis voluptatum alias fugit.
-                  Explicabo ducimus
-                </span>
-                <!-- <br />
-                  <br /> -->
-                <span>
-                  sapiente aut corporis odio repellendus? Lorem ipsum dolor
-                  sit amet, consectetur adipisicing elit
-                </span>
-              </p>
-              <button class="btn btn-theme projects__btn-theme">
-                Live Link
-              </button>
-              <button class="btn btn-inv projects__btn-inv">Code Link</button>
-            </div>
-          </div>
-          <div class="projects__list-item projects__list-item--inv">
-            <div class="projects__list-item-details">
-              <div class="projects__list-item-img-cont">
-                <img src="./assets/mock.png" alt="Project Image" class="projects__list-item-img" />
-              </div>
-              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
-                Project Name
-              </h3>
-              <!-- <hr class="projects__title-text-divider" /> -->
-
-              <p class="text-primary projects__list-item-text-primary">
-                <span>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Error, aliquid! Itaque corrupti magnam fugiat mollitia
-                  labore magni saepe veritatis voluptatum alias fugit.
-                  Explicabo ducimus
-                </span>
-                <!-- <br />
-                  <br /> -->
-                <span>
-                  sapiente aut corporis odio repellendus? Lorem ipsum dolor
-                  sit amet, consectetur adipisicing elit
-                </span>
-              </p>
-              <button class="btn btn-theme projects__btn-theme">
-                Live Link
-              </button>
-              <button class="btn btn-inv projects__btn-inv">Code Link</button>
-            </div>
-            <div class="projects__list-item-count">
-              <span class="projects__list-item-count-num"> 2 </span>
-              <span class="projects__list-item-count-line"> </span>
-              <span class="projects__list-item-count-end-dot"> </span>
-            </div>
-          </div>
-          <div class="projects__list-item">
-            <div class="projects__list-item-count">
-              <span class="projects__list-item-count-num"> 3 </span>
-              <span class="projects__list-item-count-line"> </span>
-              <span class="projects__list-item-count-end-dot"> </span>
-            </div>
-            <div class="projects__list-item-details">
-              <div class="projects__list-item-img-cont">
-                <img src="./assets/mock.png" alt="Project Image" class="projects__list-item-img" />
-              </div>
-              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
-                Project Name
-              </h3>
-              <!-- <hr class="projects__title-text-divider" /> -->
-
-              <p class="text-primary projects__list-item-text-primary">
-                <span>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Error, aliquid! Itaque corrupti magnam fugiat mollitia
-                  labore magni saepe veritatis voluptatum alias fugit.
-                  Explicabo ducimus
-                </span>
-                <!-- <br />
-                  <br /> -->
-                <span>
-                  sapiente aut corporis odio repellendus? Lorem ipsum dolor
-                  sit amet, consectetur adipisicing elit
-                </span>
-              </p>
-              <button class="btn btn-theme projects__btn-theme">
-                Live Link
-              </button>
-              <button class="btn btn-inv projects__btn-inv">Code Link</button>
-            </div>
-          </div>
-          <div class="projects__list-item projects__list-item--inv">
-            <div class="projects__list-item-details">
-              <div class="projects__list-item-img-cont">
-                <img src="./assets/mock.png" alt="Project Image" class="projects__list-item-img" />
-              </div>
-              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
-                Project Name
-              </h3>
-              <!-- <hr class="projects__title-text-divider" /> -->
-
-              <p class="text-primary projects__list-item-text-primary">
-                <span>
-                  Landy National High School Document Request System
-                </span>
-                <!-- <br />
-                  <br /> -->
-                <span>
-                  sapiente aut corporis odio repellendus? Lorem ipsum dolor
-                  sit amet, consectetur adipisicing elit
-                </span>
-              </p>
-              <button class="btn btn-theme projects__btn-theme">
-                Live Link
-              </button>
-              <button class="btn btn-inv projects__btn-inv">Code Link</button>
-            </div>
-            <div class="projects__list-item-count">
-              <span class="projects__list-item-count-num"> 4 </span>
-              <span class="projects__list-item-count-line"> </span>
-              <span class="projects__list-item-count-end-dot"> </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="contact" class="contact main-section">
-    <div class="main-container">
-      <h2 class="heading-secondary">
-        <span class="heading-secondary__sm"> Contact 📞</span>
-        <span class="heading-secondary__main">
-          Feel free to Contact me by submitting the form below and I will get back to you as soon as possible
-        </span>
-      </h2>
-      <div class="main-section__content">
-        <div class="contact__form-cont">
-          <form class="contact__form">
-            <div class="contact__form-field">
-              <label for="name" class="contact__form-field-label">Name</label>
-              <input placeholder="Enter Your Name" type="text" class="contact__form-field-input" />
-            </div>
-            <div class="contact__form-field">
-              <label for="name" class="contact__form-field-label">Email</label>
-              <input placeholder="Enter Your Email" type="text" class="contact__form-field-input" />
-            </div>
-            <div class="contact__form-field">
-              <label for="name" class="contact__form-field-label">Message</label>
-              <textarea placeholder="Enter Your Message" name="message" id="" cols="30" rows="10"
-                class="contact__form-field-input"></textarea>
-            </div>
-            <button type="submit" class="contact__form-submit">Submit</button>
-          </form>
-          <div class="contact__form-visual"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer class="main-footer">
-    <div class="main-footer__upper">
-      <div class="main-container">
-        <ul class="main-footer__links">
-          <li class="main-footer__link">
-            <a href="./index.html">Home</a>
-          </li>
-          <li class="main-footer__link">
-            <a href="./index.html#about">About</a>
-          </li>
-          <li class="main-footer__link">
-            <a href="./index.html#projects">Projects</a>
-          </li>
-          <li class="main-footer__link">
-            <a href="./index.html#contact">Contact</a>
-          </li>
-        </ul>
-        <div class="main-footer__mid-line"></div>
-        <div class="main-footer__socials">
-          <a href="#" class="main-footer__social-link">
-            <img
-              src="https://d33wubrfki0l68.cloudfront.net/5557d5a11584d7201a38ee1a95200f57a4cc0f88/15085/assets/png/github-ico.png"
-              alt="" class="main-footer__social-link-icon" />
-          </a>
-          <a href="#" class="main-footer__social-link">
-            <img src="./assets/icons8-instagram-48.png" alt="" class="main-footer__social-link-icon" />
-          </a>
-          <a href="#" class="main-footer__social-link">
-            <img src="./assets/icons8-twitter-50.png" alt="" class="main-footer__social-link-icon" />
-          </a>
-          <a href="#" class="main-footer__social-link">
-            <img
-              src="https://d33wubrfki0l68.cloudfront.net/7f29579dde49e02480372aa49f7189c5536b0118/34b92/assets/png/linkedin-ico.png"
-              alt="" class="main-footer__social-link-icon" />
-          </a>
-          <a href="#" class="main-footer__social-link">
-            <img src="./assets/icons8-pinterest-64.png" alt="" class="main-footer__social-link-icon" />
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="main-footer__bottom">
-      <div class="main-container">
-        <p class="main-footer__bottom-txt">
-          <!-- If you can give me some credits or shoutout here by linking to my website, then that will help me a lot :) -->
-          <a target="_blank" href="https://github.com/rammcodes/wowfolio">WowFolio</a> Open-Source Template
-          <script>document.write(new Date().getFullYear())</script>. Made by
-          <a target="_blank" href="https://rammaheshwari.com">Ram Maheshwari</a>
+    <h2> Projects 🛠️</h2>
+    <div class="projects__list">
+      <!-- Only Project -->
+      <div class="projects__list-item">
+        <img src="./assets/mock.png" alt="Landy NHS Project" class="projects__list-item-img" />
+        <h3>Landy National High School Document Request System</h3>
+        <p>
+          A document request system developed as part of our Capstone Project for Software Design.
+          It streamlines the process for students and staff to request and process official documents efficiently.
         </p>
+        <button class="btn">Live Link</button>
+        <button class="btn btn-inv">Code Link</button>
       </div>
     </div>
+  </section>
+
+  <section id="contact" class="contact main-section">
+    <h2> Contact me📞</h2>
+    <h2> FB: John Francis Abella Flores </h2>
+    <h2> IG: _plowesss </h2>
+    <p>Let’s connect! Send me a message and I’ll respond soon.</p>
+    <form class="contact__form">
+      <div class="contact__form-field">
+        <label for="name">Name</label>
+        <input placeholder="Enter Your Name" type="text" id="name" />
+      </div>
+      <div class="contact__form-field">
+        <label for="email">Email</label>
+        <input placeholder="Enter Your Email" type="email" id="email" />
+      </div>
+      <div class="contact__form-field">
+        <label for="message">Message</label>
+        <textarea placeholder="Enter Your Message" id="message" cols="30" rows="5"></textarea>
+      </div>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </section>
+
+  <footer class="main-footer">
+    <p>© <script>document.write(new Date().getFullYear())</script> John Francis A. Flores.  
+      Template inspired by Wowfolio.</p>
   </footer>
-  <script src="./script.js"></script>
 </body>
 
 </html>
