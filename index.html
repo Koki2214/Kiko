@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,144 +10,16 @@
   <title>John Francis A. Flores - Portfolio</title>
   <meta name="description" content="Portfolio of John Francis A. Flores" />
 
-  <style>
-    /* Minimalist Black & Gray Theme */
-    body {
-      background-color: #121212;
-      color: #e0e0e0;
-      font-family: 'PT Sans', sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
+  <!-- Link your stylesheet (same folder as index.html) -->
+  <link rel="stylesheet" href="style.css?v=1" />
 
-    header,
-    footer {
-      background-color: #1a1a1a;
-      color: #e0e0e0;
-      padding: 1em 2em;
-    }
-
-    .main-header__logo-text {
-      font-weight: bold;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      gap: 1.2em;
-    }
-
-    nav a {
-      color: #e0e0e0;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #aaaaaa;
-    }
-
-    .home-hero {
-      padding: 5em 2em;
-      text-align: center;
-    }
-
-    .heading-primary__main {
-      font-size: 1.8em;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 4em 2em;
-    }
-
-    h2 {
-      font-size: 1.6em;
-      margin-bottom: 1em;
-      color: #f0f0f0;
-    }
-
-    .btn {
-      background-color: #333;
-      color: #fff;
-      border: 1px solid #444;
-      padding: 0.6em 1.2em;
-      border-radius: 4px;
-      transition: 0.3s;
-      cursor: pointer;
-      margin: 0.3em;
-    }
-
-    .btn:hover {
-      background-color: #555;
-    }
-
-    .btn-inv {
-      background-color: transparent;
-      border: 1px solid #666;
-      color: #e0e0e0;
-    }
-
-    .btn-inv:hover {
-      background-color: #222;
-    }
-
-    .about__skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5em;
-      list-style: none;
-      padding: 0;
-    }
-
-    .about__skill {
-      background: #222;
-      padding: 0.4em 0.8em;
-      border-radius: 4px;
-      font-size: 0.9em;
-    }
-
-    .projects__list-item {
-      background: #1e1e1e;
-      padding: 1.5em;
-      border-radius: 8px;
-      margin-bottom: 2em;
-    }
-
-    .projects__list-item-img {
-      width: 100%;
-      border-radius: 6px;
-      margin-bottom: 1em;
-    }
-
-    .contact__form-field {
-      margin-bottom: 1em;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .contact__form-field-input,
-    textarea {
-      padding: 0.6em;
-      border: 1px solid #444;
-      border-radius: 4px;
-      background: #1e1e1e;
-      color: #fff;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.9em;
-    }
-  </style>
+  <!-- MAIN HEADER SCRIPT -->
 </head>
-
 <body>
   <header class="main-header">
     <div class="main-header__logo-container">
-      <h4 class="main-header__logo-text">John Francis A. Flores</h4>
+      <img src="/assets/pic.png" alt="John Francis A. Flores" class="main-header__logo-img" />
+      <h4 class="main-header__logo-text">KiCodes Portfolio</h4>
     </div>
     <nav class="main-header__navigation">
       <ul class="main-header__navigation-links">
@@ -160,21 +31,30 @@
     </nav>
   </header>
 
-  <section id="home-hero" class="home-hero">
-    <div class="home-hero__content">
-      <h1 class="heading-primary home-hero__heading-primary">
-        <span class="heading-primary__sm"> Hello 👋</span><br>
-        <span class="heading-primary__main">
-          I'm John Francis A. Flores! A Computer Engineering student who loves to learn and create with technology.
-        </span>
-      </h1>
-      <button class="btn">Projects</button>
-      <button class="btn btn-inv">Contact</button>
+<!-- Hello Section -->
+ <section id="home-hero" class="home-hero">
+  <div class="home-hero__content">
+    <!-- Profile Image -->
+    <div class="home-hero__image-container">
+      <img src="/assets/pic.png" alt="John Francis A. Flores" class="home-hero__image" />
     </div>
-  </section>
 
+    <!-- Heading -->
+    <h1 class="heading-primary home-hero__heading-primary">
+      <span class="heading-primary__sm">Hello! 👋</span><br />
+      <span class="heading-primary__main">
+        I'm John Francis A. Flores! A Computer Engineering student who loves to learn and create with technology.
+      </span>
+    </h1>
+
+
+  </div>
+</section>
+
+
+<!-- About Section -->
   <section id="about" class="about main-section">
-    <h2> About 🦄</h2>
+    <h2> About KiCodes</h2>
     <p>
       👋 Hi, I’m <b>John Francis A. Flores</b>, a Computer Engineering student at Marinduque State University.
       I’m passionate about computer hardware, electronics, and programming (Python & Java).
@@ -183,21 +63,42 @@
     </p>
     <h3>My Skills</h3>
     <ul class="about__skills">
-      <li class="about__skill">HTML</li>
-      <li class="about__skill">CSS</li>
-      <li class="about__skill">JavaScript</li>
-      <li class="about__skill">Python</li>
-      <li class="about__skill">Java</li>
-      <li class="about__skill">Git</li>
-      <li class="about__skill">Linux</li>
-      <li class="about__skill">Electronics</li>
-    </ul>
+
+  <li class="about__skill">
+    <img src="./assets/html-logo.png" alt="HTML Logo" /> HTML
+  </li>
+
+  <li class="about__skill">
+    <img src="./assets/css-logo.png" alt="CSS Logo" /> CSS
+  </li>
+
+  <li class="about__skill">
+    <img src="./assets/js-logo.png" alt="JavaScript Logo" /> JavaScript
+  </li>
+
+  <li class="about__skill">
+    <img src="./assets/python-logo.png" alt="Python Logo" /> Python
+  </li>
+
+  <li class="about__skill">
+    <img src="./assets/java-logo.png" alt="Java Logo" /> Java
+  </li>
+
+  <li class="about__skill">
+    <img src="./assets/git-logo.png" alt="Git Logo" /> Git
+  </li>
+  
+  <li class="about__skill">
+    <img src="./assets/electronics-logo.png" alt="Electronics Logo" /> Electronics
+  </li>
+</ul>
+
   </section>
 
+<!-- Projects Section -->
   <section id="projects" class="projects main-section">
-    <h2> Projects 🛠️</h2>
+    <h2> My Projects</h2>
     <div class="projects__list">
-      <!-- Only Project -->
       <div class="projects__list-item">
         <img src="./assets/mock.png" alt="Landy NHS Project" class="projects__list-item-img" />
         <h3>Landy National High School Document Request System</h3>
@@ -205,38 +106,61 @@
           A document request system developed as part of our Capstone Project for Software Design.
           It streamlines the process for students and staff to request and process official documents efficiently.
         </p>
-        <button class="btn">Live Link</button>
-        <button class="btn btn-inv">Code Link</button>
+        <button class="btn">Code Link</button>
+        
       </div>
     </div>
   </section>
+  
+<!-- Contact Section -->
 
-  <section id="contact" class="contact main-section">
-    <h2> Contact me📞</h2>
-    <h2> FB: John Francis Abella Flores </h2>
-    <h2> IG: _plowesss </h2>
-    <p>Let’s connect! Send me a message and I’ll respond soon.</p>
+<section id="contact" class="contact main-section">
+  <h2> Contact me📞</h2>
+
+  <!-- Contact Links -->
+  <div class="contact__socials">
+    <a href="https://www.facebook.com/share/1F1CNxWVBF/" target="_blank" class="contact__social-box">
+      <img src="assets/fb-logo.png" alt="Facebook Logo" class="contact__social-logo" />
+      <span>John Francis Abella Flores</span>
+    </a>
+    <a href="https://www.instagram.com/_plowesss?igsh=MWJ6NnI3OHNmN3BkaA==" target="_blank" class="contact__social-box">
+      <img src="assets/ig-logo.png" alt="Instagram Logo" class="contact__social-logo" />
+      <span>_plowesss</span>
+    </a>
+
+    <!-- Download CV -->
+    <a href="assets/JohnFrancisFlores_CV.pdf" download class="contact__social-box">
+      <img src="assets/cv-logo.png" alt="Download CV Logo" class="contact__social-logo" />
+      <span>Download CV</span>
+    </a>
+  </div>
+</section>
+
+
+
+    <!-- <p>Let’s connect! Send me a message and I’ll respond soon.</p>
     <form class="contact__form">
       <div class="contact__form-field">
         <label for="name">Name</label>
-        <input placeholder="Enter Your Name" type="text" id="name" />
+        <input placeholder="Enter Your Name" type="text" id="name" name="name" />
       </div>
       <div class="contact__form-field">
         <label for="email">Email</label>
-        <input placeholder="Enter Your Email" type="email" id="email" />
+        <input placeholder="Enter Your Email" type="email" id="email" name="email" />
       </div>
       <div class="contact__form-field">
         <label for="message">Message</label>
-        <textarea placeholder="Enter Your Message" id="message" cols="30" rows="5"></textarea>
+        <textarea placeholder="Enter Your Message" id="message" name="message" cols="30" rows="5"></textarea>
       </div>
       <button type="submit" class="btn">Submit</button>
-    </form>
-  </section>
+    </form> -->
+
 
   <footer class="main-footer">
     <p>© <script>document.write(new Date().getFullYear())</script> John Francis A. Flores.  
       Template inspired by Wowfolio.</p>
   </footer>
-</body>
 
+  
+</body>
 </html>
